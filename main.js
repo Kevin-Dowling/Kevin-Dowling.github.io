@@ -49,3 +49,32 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+
+// Pillar properties
+const pillarHeight = 5;
+const pillarRadius = 0.5;
+const pillarMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513 }); // Brown color
+
+// Create and add multiple pillars to the scene
+for (let i = -2; i <= 2; i += 2) {  // Positioning pillars at intervals
+    const pillarGeometry = new THREE.CylinderGeometry(pillarRadius, pillarRadius, pillarHeight);
+    const pillar = new THREE.Mesh(pillarGeometry, pillarMaterial);
+    pillar.position.x = i; // Setting x position
+    pillar.position.y = pillarHeight / 2 - 1; // Half of pillar's height minus a small offset
+    scene.add(pillar);
+}
+
+// Mountain properties
+const mountainBase = 3;
+const mountainHeight = 7;
+const mountainMaterial = new THREE.MeshBasicMaterial({ color: 0x696969 }); // Gray color
+
+// Create and add multiple mountains to the scene
+for (let i = -10; i <= 10; i += 5) {  // Positioning mountains at intervals
+    const mountainGeometry = new THREE.ConeGeometry(mountainBase, mountainHeight);
+    const mountain = new THREE.Mesh(mountainGeometry, mountainMaterial);
+    mountain.position.x = i; // Setting x position
+    mountain.position.y = -1; // Setting y position to ground level
+    mountain.position.z = -10; // Placing them further back in the scene
+    scene.add(mountain);
+}
