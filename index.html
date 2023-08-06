@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webcam Parallax Cube</title>
-    <link rel="stylesheet" href="style.css">
+    <title>New Clock</title>
+    <style>
+        #clock {
+            font-size: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #date {
+            font-size: 200px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <video id="video" width="720" height="560" autoplay muted></video>
-    <script src="https://unpkg.com/three@0.127.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
-    <script src="main.js"></script>
+    <h1 style="text-align: center; font-size: 100px;">Current New Kelvin Time is:</h1>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <script src="script.js"></script>
 </body>
 </html>
