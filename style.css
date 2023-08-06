@@ -1,5 +1,17 @@
-#clock {
-    font-size: 300px;
-    font-weight: bold;
-    text-align: center;
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ececec;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;  /* semi-transparent to see the cube */
 }
