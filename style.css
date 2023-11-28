@@ -1,5 +1,12 @@
-#clock {
-    font-size: 300px;
-    font-weight: bold;
-    text-align: center;
+#tv-container {
+    /* Styles for the container */
+}
+
+.tv {
+    /* Styles for each television */
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    /* Define the flashing animation */
 }
